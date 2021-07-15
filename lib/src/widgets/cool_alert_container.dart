@@ -150,6 +150,7 @@ class CoolAlertContainer extends StatelessWidget {
       return Text(
         text ?? '',
         textAlign: TextAlign.center,
+        style: Theme.of(context).textTheme.bodyText2,
       );
     }
   }

@@ -35,9 +35,18 @@ class CoolAlertButtons extends StatelessWidget {
       onTap: options!.onConfirmBtnTap ?? () => Navigator.pop(context),
     );
 
+    /// Expanded buttons if both are visible.
     if (showCancelBtn) {
+      /// Check for custom button.
+      if (options?.confirmButton != null) {
+        return Expanded(child: options!.confirmButton!);
+      }
       return Expanded(child: _okayBtn);
     } else {
+      /// Check for custom button.
+      if (options?.confirmButton != null) {
+        return options!.confirmButton!;
+      }
       return _okayBtn;
     }
   }
@@ -54,6 +63,10 @@ class CoolAlertButtons extends StatelessWidget {
     );
 
     if (showCancelBtn) {
+      /// Check for custom button.
+      if (options?.cancelButton != null) {
+        return Expanded(child: options!.cancelButton!);
+      }
       return Expanded(child: _cancelBtn);
     } else {
       return Container();

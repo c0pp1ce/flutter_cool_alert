@@ -23,6 +23,8 @@ class CoolAlertOptions {
   String? lottieAsset;
   double? width;
   bool loopAnimation;
+  Widget? confirmButton;
+  Widget? cancelButton;
 
   CoolAlertOptions({
     this.title,
@@ -46,5 +48,7 @@ class CoolAlertOptions {
     this.lottieAsset,
     this.width,
     this.loopAnimation = false,
+    this.confirmButton,
+    this.cancelButton,
   });
 }

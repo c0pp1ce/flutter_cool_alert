@@ -84,6 +84,12 @@ class CoolAlert {
     /// Width of the dialog
     double? width,
 
+    /// Replace the default button.
+    Widget? confirmButton,
+
+    /// Replace the default button.
+    Widget? cancelButton,
+
     /// Determines how long the dialog stays open for before closing
     /// [default] is null
     /// When it is null, it won't autoclose
@@ -120,6 +126,8 @@ class CoolAlert {
       lottieAsset: lottieAsset,
       width: width,
       loopAnimation: loopAnimation,
+      confirmButton: confirmButton,
+      cancelButton: cancelButton,
     );
 
     final child = AlertDialog(
