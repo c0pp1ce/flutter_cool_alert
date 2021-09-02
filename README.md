@@ -1,5 +1,7 @@
 # cool_alert
 
+***Custom fork to enable own buttons***
+
 A Flutter package to display animated alert dialogs
 
 ## Usage
